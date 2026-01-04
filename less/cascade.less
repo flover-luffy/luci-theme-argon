@@ -180,7 +180,7 @@
 
     // Header & Navigation
     --header-bg: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
-    --menu-bg-color: rgba(17, 24, 39, 0.6); // Deep dark glass
+    --menu-bg-color: rgba(17, 24, 39, 0.8); // Deep dark glass
     --menu-color: #CBD5E1; // Slate-300
     --main-menu-color: #F1F5F9; // Slate-100
 
@@ -225,11 +225,11 @@
 
   // Sidebar with glassmorphism (UI/UX Pro Max: blur 10-20px)
   .main-left {
-    background-color: rgba(0, 0, 0, 0.7) !important;
-    backdrop-filter: blur(16px) saturate(180%) !important;
-    -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+    background-color: rgba(17, 24, 39, 0.8) !important;
+    backdrop-filter: blur(20px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
     border-right: 1px solid rgba(255, 255, 255, 0.1) !important;
-    box-shadow: 2px 0 12px rgba(0, 0, 0, 0.3) !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4) !important;
   }
 
   // All containers and sections
@@ -432,6 +432,9 @@
   .cbi-rowstyle-2 {
     background-color: rgba(255, 255, 255, 0.03) !important;
   }
+
+  // Import granular overrides
+  @import "modules/dark-overrides.less";
 }
 
 // ========================================================================

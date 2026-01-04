@@ -65,11 +65,14 @@ header::after {
   background: linear-gradient(135deg, #1A1F2E 0%, #0F1419 100%) !important;
 }
 .main .main-left {
-  background-color: #333333 !important;
-  box-shadow: 0 0 0.5rem 0 rgba(0, 0, 0, 0.15);
+  background-color: rgba(17, 24, 39, 0.8) !important;
+  backdrop-filter: blur(20px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4) !important;
 }
 .main .main-left .sidenav-header .brand {
-  color: #cccccc;
+  color: #F1F5F9;
 }
 .main .main-left .nav .slide .slide-menu .active a {
   color: #cccccc;
@@ -81,7 +84,7 @@ header::after {
   background-color: var(--dark-primary) !important;
 }
 .main .main-left .nav .slide .slide-menu li a {
-  color: #cccccc;
+  color: #94A3B8;
 }
 .main .main-left .nav .slide .slide-menu li a:hover {
   background: none !important;
@@ -98,7 +101,7 @@ header::after {
   background-color: #ffffff !important;
 }
 .main .main-left .nav li a {
-  color: #cccccc !important;
+  color: #CBD5E1 !important;
 }
 .main .main-left .nav li a:hover {
   background-color: #483d8b !important;

@@ -130,7 +130,7 @@
     --primary: #60A5FA;
     --primary-dark: #3B82F6;
     --header-bg: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
-    --menu-bg-color: rgba(17, 24, 39, 0.6);
+    --menu-bg-color: rgba(17, 24, 39, 0.8);
     --menu-color: #CBD5E1;
     --main-menu-color: #F1F5F9;
     --background-color: #111827;
@@ -156,11 +156,11 @@
     background-image: var(--background-gradient), var(--background-pattern) !important;
   }
   .main-left {
-    background-color: rgba(0, 0, 0, 0.7) !important;
-    backdrop-filter: blur(16px) saturate(180%) !important;
-    -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+    background-color: rgba(17, 24, 39, 0.8) !important;
+    backdrop-filter: blur(20px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
     border-right: 1px solid rgba(255, 255, 255, 0.1) !important;
-    box-shadow: 2px 0 12px rgba(0, 0, 0, 0.3) !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4) !important;
   }
   .cbi-section,
   .cbi-map,
@@ -1248,11 +1248,11 @@ select[multiple="multiple"] {
   z-index: 100;
   overflow-x: auto;
   word-break: break-word;
-  background-color: var(--menu-bg-color);
-  backdrop-filter: blur(30px) saturate(180%);
-  -webkit-backdrop-filter: blur(30px) saturate(180%);
-  border-right: var(--glass-border);
-  box-shadow: var(--glass-shadow);
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-right: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
   transition: all var(--transition-base);
 }
 .main-left .sidenav-header {

@@ -1,0 +1,174 @@
+/**
+ *  Nexus Theme - Dark Mode Overrides
+ *  This file contains granular overrides for specific components and pages in dark mode.
+ *  It replaces the legacy dark.less and uses the new variable system.
+ */
+
+// ========================================================================
+// Global Overrides
+// ========================================================================
+
+// Spinners & Icons
+.spinning::before {
+    filter: invert(1);
+}
+
+img.svgmonochrome {
+    filter: invert(90%);
+}
+
+// Auto-fill inputs - fix white background
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px #3c3c3c inset !important;
+    -webkit-text-fill-color: var(--text-main) !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+// Scrollbars
+::-webkit-scrollbar-thumb {
+    background: var(--primary) !important;
+    border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-dark) !important;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+// ========================================================================
+// Component Overrides
+// ========================================================================
+
+// Tables
+.cbi-section-table-row {
+    background-color: rgba(255, 255, 255, 0.03) !important;
+}
+
+.cbi-section-table-row.fast {
+    background: var(--primary) !important;
+    color: #fff !important;
+}
+
+// Dropdowns
+.cbi-dropdown[open] {
+    border-color: var(--primary) !important;
+}
+
+.cbi-dropdown[open]>ul.dropdown {
+    background: var(--card-bg) !important;
+    backdrop-filter: blur(var(--blur-radius));
+    -webkit-backdrop-filter: blur(var(--blur-radius));
+    color: var(--text-main) !important;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-color) !important;
+}
+
+.cbi-dropdown[open]>ul.dropdown li {
+    color: var(--text-main);
+    border-bottom: 1px solid var(--border-color) !important;
+}
+
+.cbi-dropdown[open]>ul.dropdown>li[selected] {
+    background-color: var(--primary) !important;
+}
+
+.cbi-dropdown[open]>ul.dropdown>li.focus {
+    background: var(--primary);
+    outline: none;
+}
+
+// Badges
+.ifacebadge {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.zonebadge>.ifacebadge {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+// Buttons - Ensure generic buttons are visible
+.btn,
+.cbi-button {
+    border-color: var(--border-color) !important;
+    background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+.cbi-button-apply,
+.cbi-button-save,
+.cbi-button-positive,
+.cbi-button-action {
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+    color: #fff !important;
+}
+
+
+// ========================================================================
+// Page Specific Overrides
+// ========================================================================
+
+// Plugin: VSSR / SSR Plus
+.node-services-vssr .block {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+    box-shadow: 0 0 0.5rem 0 rgba(0, 0, 0, 0.35);
+}
+
+.node-services-vssr .status-bar {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+// Network Diagnostics
+[data-page="admin-network-diagnostics"] {
+    .cbi-section {
+        background: var(--card-bg) !important;
+    }
+
+    textarea {
+        background: transparent !important;
+        color: var(--text-main) !important;
+        border: 1px solid var(--border-color) !important;
+    }
+}
+
+// System Flash
+[data-page="admin-system-flash"] {
+    .modal {
+        background-color: var(--card-bg) !important;
+        backdrop-filter: blur(var(--blur-radius));
+        border: 1px solid var(--border-color);
+
+        label>input[type="checkbox"] {
+            border-color: var(--text-main) !important;
+        }
+    }
+}
+
+// OpenClash
+[data-page^="admin-services-openclash"] {
+    .oc {
+        --bg-light: rgba(255, 255, 255, 0.05) !important;
+        --bg-gray: rgba(255, 255, 255, 0.05) !important;
+    }
+
+    .config-upload-content {
+        background: rgba(255, 255, 255, 0.05) !important;
+    }
+}
+
+// File Assistant
+[data-page="admin-system-fileassistant"] {
+    .fb-container .panel-container {
+        border-bottom-color: var(--border-color) !important;
+    }
+
+    .fb-container td[class$="-icon"]::before {
+        filter: invert(0.8);
+    }
+}
