@@ -30,7 +30,7 @@ env:
 
 jobs:
   job_check:
-    if: github.repository == ${{ github.repository }}
+    if: ${{ github.repository == github.repository }}
     name: Check Version
     runs-on: ubuntu-latest
     outputs:
