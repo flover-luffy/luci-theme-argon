@@ -264,6 +264,15 @@
     background-color: var(--primary) !important;
     color: #ffffff !important;
   }
+  .food.active,
+  a.food.active {
+    color: #ffffff !important;
+    background-color: var(--primary) !important;
+  }
+  .food,
+  a.food {
+    color: var(--menu-color) !important;
+  }
   .cbi-value-title,
   .cbi-value-field,
   .cbi-section-descr,
