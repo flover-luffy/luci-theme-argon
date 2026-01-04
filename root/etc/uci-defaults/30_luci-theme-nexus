@@ -1,12 +1,11 @@
 #!/bin/sh
 
 if [ "$PKG_UPGRADE" != 1 ]; then
-	uci get luci.themes.Nexus >/dev/null 2>&1 || \
-	uci batch <<-EOF
-		set luci.themes.Nexus=/luci-static/nexus
-		set luci.main.mediaurlbase=/luci-static/nexus
-		commit luci
-	EOF
+	uci get luci.themes.Nexus >/dev/null 2>&1 || {
+		uci set luci.themes.Nexus=/luci-static/nexus
+		uci set luci.main.mediaurlbase=/luci-static/nexus
+		uci commit luci
+	}
 fi
 
 exit 0
