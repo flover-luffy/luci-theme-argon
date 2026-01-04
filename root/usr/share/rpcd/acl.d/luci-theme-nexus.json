@@ -1,0 +1,8 @@
+{
+    "luci-theme-nexus": {
+        "description": "Grant UCI access for luci-theme-nexus",
+        "read": {
+            "uci": [ "nexus" ]
+        }
+    }
+}
