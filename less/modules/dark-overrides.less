@@ -62,8 +62,8 @@ input:-webkit-autofill:active {
 
 .cbi-dropdown[open]>ul.dropdown {
     background: var(--card-bg) !important;
-    backdrop-filter: blur(var(--blur-radius));
-    -webkit-backdrop-filter: blur(var(--blur-radius));
+    backdrop-filter: var(--blur-md);
+    -webkit-backdrop-filter: var(--blur-md);
     color: var(--text-main) !important;
     box-shadow: var(--shadow-lg);
     border: 1px solid var(--border-color) !important;
@@ -141,7 +141,7 @@ input:-webkit-autofill:active {
 [data-page="admin-system-flash"] {
     .modal {
         background-color: var(--card-bg) !important;
-        backdrop-filter: blur(var(--blur-radius));
+        backdrop-filter: var(--blur-md);
         border: 1px solid var(--border-color);
 
         label>input[type="checkbox"] {

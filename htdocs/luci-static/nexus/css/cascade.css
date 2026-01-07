@@ -25,11 +25,11 @@
   --primary-dark: #3B82F6;
   --primary-light: #60A5FA;
   --primary-lighter: #93C5FD;
-  --header-color: #fff;
-  --header-bg: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
-  --menu-bg-color: rgba(17, 24, 39, 0.8);
-  --menu-color: #CBD5E1;
-  --main-menu-color: #F1F5F9;
+  --header-color: #FFFFFF;
+  --header-bg: linear-gradient(135deg, #0A0A0A 0%, #000000 100%);
+  --menu-bg-color: rgba(30, 30, 30, 0.7);
+  --menu-color: #B0B0B0;
+  --main-menu-color: #FFFFFF;
   --background-color: #000000;
   --background-elevated: #121212;
   --background-gradient: linear-gradient(135deg, #000000 0%, #0A0A0A 100%);
@@ -349,8 +349,8 @@ input:-webkit-autofill:active {
 }
 .cbi-dropdown[open] > ul.dropdown {
   background: var(--card-bg) !important;
-  backdrop-filter: blur(var(--blur-radius));
-  -webkit-backdrop-filter: blur(var(--blur-radius));
+  backdrop-filter: var(--blur-md);
+  -webkit-backdrop-filter: var(--blur-md);
   color: var(--text-main) !important;
   box-shadow: var(--shadow-lg);
   border: 1px solid var(--border-color) !important;
@@ -403,7 +403,7 @@ input:-webkit-autofill:active {
 }
 [data-page="admin-system-flash"] .modal {
   background-color: var(--card-bg) !important;
-  backdrop-filter: blur(var(--blur-radius));
+  backdrop-filter: var(--blur-md);
   border: 1px solid var(--border-color);
 }
 [data-page="admin-system-flash"] .modal label > input[type="checkbox"] {
@@ -1241,8 +1241,8 @@ select[multiple="multiple"] {
   width: 26rem;
   flex-direction: column;
   background-color: var(--login-form-bg-color);
-  backdrop-filter: blur(40px) saturate(180%);
-  -webkit-backdrop-filter: blur(40px) saturate(180%);
+  backdrop-filter: var(--blur-lg) var(--blur-saturate);
+  -webkit-backdrop-filter: var(--blur-lg) var(--blur-saturate);
   border-right: var(--login-form-border);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.5);
 }
