@@ -4884,7 +4884,7 @@ div[style*="display:grid;grid-template-columns:repeat"] .ifacebox .ifacebox-body
     flex-wrap: nowrap;
   }
   .tr.placeholder {
-    border-bottom: thin solid #ddd;
+    border-bottom: thin solid var(--border-default);
   }
   .tr.placeholder > .td,
   #cbi-firewall .tr > .td,
