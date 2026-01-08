@@ -28,7 +28,7 @@
     overflow-x: auto;
     word-break: break-word;
     word-break: break-word;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: var(--glass-bg);
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
     border-right: 1px solid rgba(255, 255, 255, 0.6);
@@ -396,11 +396,11 @@
     }
 
     &::-webkit-scrollbar-thumb {
-        background-color: #f6f9fc;
+        background-color: var(--primary);
     }
 
     &::-webkit-scrollbar-track {
-        background-color: #fff;
+        background-color: transparent;
     }
 }
 
@@ -450,7 +450,7 @@
             }
 
             .dashboard-bg {
-                background-color: #fff;
+                background-color: var(--bg-surface);
             }
 
             .settings-info {
