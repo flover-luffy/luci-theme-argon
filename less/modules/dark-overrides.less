@@ -374,7 +374,14 @@ tr th:first-child,
 }
 
 // 4. Force Cells to Text Color
-.cbi-section-table-cell,
-.table .td {
+// 5. Fix Pseudo-Element Columns (HomeProxy 'Name' column)
+.cbi-section-table-row::before,
+.table .tr::before {
+    background-color: var(--bg-surface) !important;
     color: var(--text-primary) !important;
+    // Ensure it looks like a cell
+    display: table-cell;
+    padding: .5rem;
+    border-bottom: 1px solid var(--border-default) !important;
+    font-weight: normal;
 }

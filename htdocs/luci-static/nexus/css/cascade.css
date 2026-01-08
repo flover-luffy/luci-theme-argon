@@ -639,9 +639,14 @@ tr th:first-child,
 .cbi-rowstyle-2 {
   background-color: transparent !important;
 }
-.cbi-section-table-cell,
-.table .td {
+.cbi-section-table-row::before,
+.table .tr::before {
+  background-color: var(--bg-surface) !important;
   color: var(--text-primary) !important;
+  display: table-cell;
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--border-default) !important;
+  font-weight: normal;
 }
 .modal,
 .cbi-modal,
