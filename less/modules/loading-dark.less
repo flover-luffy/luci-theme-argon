@@ -1,19 +1,31 @@
-// 全局 Loading遮罩
-.loading,
-#loading {
+// 全局 Modal / Loading 遮罩修复
+// 针对 LuCI 实际使用的 #modal_overlay 结构
+#modal_overlay {
     background-color: rgba(0, 0, 0, 0.7) !important;
-    color: #fff !important;
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px) !important;
+    z-index: 9999 !important; // 确保在最上层
+}
 
-    span {
-        background-color: var(--card-bg) !important;
-        color: var(--text-primary) !important;
-        border: 1px solid var(--border-default);
-        padding: 1rem 2rem;
-        border-radius: var(--radius-md);
-        box-shadow: var(--shadow-xl);
-        background-repeat: no-repeat !important;
-        background-position: 1rem center !important;
-        padding-left: 3.5rem !important;
-    }
+#modal_overlay .modal {
+    background-color: var(--card-bg) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--border-default) !important;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5) !important;
+    border-radius: var(--radius-lg) !important;
+}
+
+// 确保 modal 内部的所有文本都是可见的
+#modal_overlay .modal pre,
+#modal_overlay .modal h4,
+#modal_overlay .modal p,
+#modal_overlay .modal div {
+    color: var(--text-primary) !important;
+    background-color: transparent !important;
+}
+
+// 加载时的动画图标 (如果有的话，通常在 pre 中或作为背景)
+#modal_overlay .modal.loading-state {
+    background-image: url(/luci-static/nexus/img/loading.svg) !important;
+    background-repeat: no-repeat !important;
+    background-position: center 2rem !important;
 }

@@ -1581,7 +1581,7 @@ select[multiple="multiple"] {
 .main-left .nav li.slide:hover {
   background: none;
 }
-.main-left .nav li.slide .slide-menu {
+html body .main-left .nav li.slide .slide-menu {
   background: rgba(0, 0, 0, 0.3) !important;
   margin: 0.5rem 1rem 0.5rem 1.5rem !important;
   padding: 0.5rem 0 !important;
@@ -1589,18 +1589,21 @@ select[multiple="multiple"] {
   border-left: 2px solid rgba(59, 130, 246, 0.3) !important;
   overflow: hidden;
 }
-.main-left .nav li.slide .slide-menu.active {
+html body .main-left .nav li.slide .slide-menu.active {
   display: block;
 }
-.main-left .nav li.slide .slide-menu li {
+html body .main-left .nav li.slide .slide-menu li {
   position: relative;
   margin: 0;
   list-style: none;
 }
-.main-left .nav li.slide .slide-menu li a {
+html body html body .main-left .nav li.slide .slide-menu li a {
   display: block;
-  padding: 0.5rem 1rem 0.5rem 2rem !important;
-  font-size: 0.875rem;
+  padding-left: 3.5rem !important;
+  padding-right: 1rem !important;
+  padding-top: 0.75rem !important;
+  padding-bottom: 0.75rem !important;
+  font-size: 0.875rem !important;
   color: rgba(203, 213, 225, 0.8) !important;
   text-decoration: none;
   transition: all 200ms ease;
@@ -1608,19 +1611,17 @@ select[multiple="multiple"] {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+html body html body .main-left .nav li.slide .slide-menu li a:hover {
+  background-color: rgba(59, 130, 246, 0.12) !important;
+  color: #ffffff !important;
+  opacity: 1;
+  padding-left: 3.75rem !important;
+}
+html body .main-left .nav li.slide .slide-menu .active {
   background: none;
 }
-.main-left .nav li.slide .slide-menu li a a {
-  color: var(--primary);
-  transform: translateX(4px);
-}
-.main-left .nav li.slide .slide-menu li a::after {
-  width: 100%;
-}
-.main-left .nav li.slide .slide-menu .active {
-  background: none;
-}
-.main-left .nav li.slide .slide-menu .active a {
+html body .main-left .nav li.slide .slide-menu .active a {
   background: linear-gradient(90deg, rgba(59, 130, 246, 0.3) 0%, rgba(59, 130, 246, 0.2) 100%) !important;
   color: #ffffff !important;
   border-left: 3px solid #60A5FA !important;
@@ -4646,23 +4647,29 @@ div[style*="display:grid;grid-template-columns:repeat"] .ifacebox .ifacebox-body
 [data-page="admin-system-opkg"] .cbi-modal input[type="file"]::file-selector-button:hover {
   background: linear-gradient(135deg, var(--primary-hover) 0%, var(--primary-active) 100%) !important;
 }
-.loading,
-#loading {
+#modal_overlay {
   background-color: rgba(0, 0, 0, 0.7) !important;
-  color: #fff !important;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px) !important;
+  z-index: 9999 !important;
 }
-.loading span,
-#loading span {
+#modal_overlay .modal {
   background-color: var(--card-bg) !important;
   color: var(--text-primary) !important;
-  border: 1px solid var(--border-default);
-  padding: 1rem 2rem;
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--border-default) !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5) !important;
+  border-radius: var(--radius-lg) !important;
+}
+#modal_overlay .modal pre,
+#modal_overlay .modal h4,
+#modal_overlay .modal p,
+#modal_overlay .modal div {
+  color: var(--text-primary) !important;
+  background-color: transparent !important;
+}
+#modal_overlay .modal.loading-state {
+  background-image: url(/luci-static/nexus/img/loading.svg) !important;
   background-repeat: no-repeat !important;
-  background-position: 1rem center !important;
-  padding-left: 3.5rem !important;
+  background-position: center 2rem !important;
 }
 /* responsive */
 @media all and (-ms-high-contrast: none) {
