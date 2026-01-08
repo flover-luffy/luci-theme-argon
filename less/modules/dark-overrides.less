@@ -303,3 +303,78 @@ svg,
     color: var(--text-primary) !important;
     border: 1px solid var(--border-default) !important;
 }
+
+// Global Form Elements Overrides
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="number"],
+input[type="email"],
+textarea,
+select,
+.cbi-dropdown {
+    background-color: var(--bg-surface) !important;
+    color: var(--text-primary) !important;
+    border-color: var(--border-default) !important;
+
+    &:focus {
+        border-color: var(--primary) !important;
+        background-color: var(--bg-surface) !important;
+        color: var(--text-primary) !important;
+    }
+}
+
+.cbi-dropdown-items {
+    background-color: var(--bg-surface) !important;
+    border-color: var(--border-default) !important;
+
+    .cbi-dropdown-item {
+        color: var(--text-primary) !important;
+        background-color: var(--bg-surface) !important;
+
+        &:hover,
+        &.selected {
+            background-color: var(--bg-hover) !important;
+        }
+    }
+}
+
+// ========================================================================
+// Table & List Fixes (Dark Mode)
+// ========================================================================
+
+// 1. Headers - dark background, light text
+.table .th,
+.cbi-section-table-titles .th,
+.table .table-titles th,
+.cbi-section-table-titles {
+    background-color: var(--bg-surface) !important;
+    color: var(--text-secondary) !important;
+    border-bottom: 1px solid var(--border-default) !important;
+}
+
+// 2. First Column - transparent/dark background (Fix HomeProxy)
+.table td:first-child,
+.table th:first-child,
+tr td:first-child,
+tr th:first-child,
+.cbi-section-table-cell:first-child,
+.cbi-section-table-row .cbi-section-table-cell:first-child {
+    background-color: var(--bg-surface) !important;
+    color: var(--text-primary) !important;
+}
+
+// 3. Row Styles - Ensure dark
+.cbi-rowstyle-1 {
+    background-color: rgba(255, 255, 255, 0.02) !important;
+}
+
+.cbi-rowstyle-2 {
+    background-color: transparent !important;
+}
+
+// 4. Force Cells to Text Color
+.cbi-section-table-cell,
+.table .td {
+    color: var(--text-primary) !important;
+}
