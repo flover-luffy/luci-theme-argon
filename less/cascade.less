@@ -624,6 +624,12 @@ select {
   border: 1px solid var(--border-default) !important;
 }
 
+select option {
+  background-color: #1e1e1e !important;
+  /* 使用硬编码的深色以确保兼容性 */
+  color: #eeeeee !important;
+}
+
 select:not([multiple="multiple"]):focus,
 input:not(.cbi-button):focus,
 .cbi-dropdown:focus {
