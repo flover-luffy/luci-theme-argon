@@ -221,28 +221,32 @@ input:-webkit-autofill:active {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-// Submenus
+// Submenus - 添加背景容器和间距
 .slide-menu {
-    background: rgba(0, 0, 0, 0.2) !important;
+    background: rgba(0, 0, 0, 0.3) !important; // 深色背景区分
     border-radius: var(--radius-md);
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin: var(--spacing-2) var(--spacing-3) !important;
+    padding: var(--spacing-2) 0 !important;
+    border-left: 2px solid rgba(59, 130, 246, 0.3) !important; // 蓝色左边框
 }
 
-// Submenu Items
+// Submenu Items - 增加缩进
 .slide-menu li a {
-    color: var(--text-secondary) !important;
+    padding-left: 3.5rem !important; // 从默认增加到 3.5rem
+    color: rgba(203, 213, 225, 0.8) !important; // 稍微暗一点
     opacity: 0.8;
+    transition: all 200ms ease;
 }
 
 .slide-menu li a:hover {
     color: #fff !important;
     opacity: 1;
-    background: transparent !important;
+    background: rgba(59, 130, 246, 0.12) !important;
     transform: translateX(5px);
+    padding-left: 3.75rem !important; // hover 时再缩进一点
 }
 
-// Submenu Active State
+// Submenu Active State - 保持现有样式
 .slide-menu .active a {
     color: var(--primary-light) !important;
     font-weight: 600;

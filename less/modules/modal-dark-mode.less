@@ -1,0 +1,149 @@
+// ========================================================================
+// Modal / Dialog 深色模式覆盖
+// 修复软件包上传等对话框的白色背景问题
+// ========================================================================
+
+// 所有 modal 对话框
+.modal,
+.cbi-modal,
+[role="dialog"],
+.modal-overlay {
+    background-color: var(--card-bg) !important;
+    backdrop-filter: var(--blur-md);
+    -webkit-backdrop-filter: var(--blur-md);
+    border: 1px solid var(--border-default) !important;
+    box-shadow: var(--shadow-xl);
+    color: var(--text-primary) !important;
+}
+
+// Modal 内容区域
+.modal-content,
+.cbi-modal>div,
+.modal-body {
+    background-color: transparent !important;
+    color: var(--text-primary) !important;
+}
+
+// Modal 标题
+.modal-header,
+.modal-title {
+    color: var(--text-primary) !important;
+    border-bottom: 1px solid var(--border-default);
+}
+
+// Modal 文本
+.modal p,
+.modal span,
+.modal label,
+.cbi-modal p,
+.cbi-modal span,
+.cbi-modal label {
+    color: var(--text-secondary) !important;
+}
+
+// Modal 输入框
+.modal input[type="file"],
+.modal input[type="text"],
+.cbi-modal input[type="file"],
+.cbi-modal input[type="text"] {
+    background-color: var(--input-bg) !important;
+    color: var(--input-text) !important;
+    border: 1px solid var(--input-border) !important;
+
+    &:hover {
+        background-color: var(--input-bg-hover) !important;
+        border-color: var(--input-border-hover) !important;
+    }
+
+    &:focus {
+        background-color: var(--input-bg-focus) !important;
+        border-color: var(--input-border-focus) !important;
+        box-shadow: var(--focus-ring);
+    }
+}
+
+// Modal 按钮 - 确保可见
+.modal .btn,
+.modal button,
+.cbi-modal .btn,
+.cbi-modal button,
+.cbi-modal .cbi-button {
+    background-color: var(--input-bg) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--border-default) !important;
+
+    &:hover {
+        background-color: var(--input-bg-hover) !important;
+        border-color: var(--border-strong) !important;
+    }
+}
+
+// Modal 主要操作按钮
+.modal .btn-primary,
+.modal .cbi-button-apply,
+.modal .cbi-button-save,
+.cbi-modal .cbi-button-apply,
+.cbi-modal .cbi-button-save {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-hover) 100%) !important;
+    border-color: var(--primary) !important;
+    color: #ffffff !important;
+
+    &:hover {
+        background: linear-gradient(135deg, var(--primary-hover) 0%, var(--primary-active) 100%) !important;
+        box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4) !important;
+    }
+}
+
+// Modal 取消按钮
+.modal .btn-default,
+.modal .cbi-button-reset,
+.cbi-modal .cbi-button-reset {
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--border-default) !important;
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.12) !important;
+        border-color: var(--border-strong) !important;
+    }
+}
+
+// Modal 遮罩层
+.modal-backdrop,
+#modal_overlay {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+    backdrop-filter: blur(4px);
+}
+
+// 文件上传页面特定修复
+[data-page="admin-system-opkg"] {
+
+    // 上传对话框
+    .modal,
+    .cbi-modal {
+        background-color: var(--card-bg) !important;
+
+        // 文件输入框
+        input[type="file"] {
+            background-color: var(--input-bg) !important;
+            color: var(--text-primary) !important;
+            border: 1px solid var(--input-border) !important;
+            padding: var(--spacing-3);
+            border-radius: var(--radius-md);
+
+            &::file-selector-button {
+                background: linear-gradient(135deg, var(--primary) 0%, var(--primary-hover) 100%) !important;
+                color: #ffffff !important;
+                border: none;
+                padding: var(--spacing-2) var(--spacing-4);
+                border-radius: var(--radius-sm);
+                margin-right: var(--spacing-3);
+                cursor: pointer;
+
+                &:hover {
+                    background: linear-gradient(135deg, var(--primary-hover) 0%, var(--primary-active) 100%) !important;
+                }
+            }
+        }
+    }
+}
