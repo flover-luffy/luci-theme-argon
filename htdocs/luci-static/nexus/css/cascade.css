@@ -40,6 +40,7 @@
   --bg-elevated: #0A0A0A;
   --bg-surface: #121212;
   --bg-overlay: #1A1A1A;
+  --bg-dropdown: rgba(30, 30, 30, 0.98);
   --glass-bg: rgba(30, 30, 30, 0.6);
   --glass-bg-hover: rgba(30, 30, 30, 0.75);
   --glass-border: rgba(255, 255, 255, 0.12);
@@ -314,7 +315,7 @@ a:hover {
   background-color: transparent !important;
   color: rgba(203, 213, 225, 0.9) !important;
   transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1) !important;
-  font-size: 1.25rem !important;
+  font-size: 0.9375rem !important;
 }
 .menu.active {
   background-color: rgba(139, 92, 246, 0.15) !important;
@@ -333,7 +334,7 @@ a:hover {
 a.food {
   color: rgba(148, 163, 184, 0.9) !important;
   padding-left: 3rem !important;
-  font-size: 1.125rem !important;
+  font-size: 0.8125rem !important;
   transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 .food.active,
@@ -410,7 +411,7 @@ input:-webkit-autofill:active {
   border-color: var(--primary) !important;
 }
 .cbi-dropdown[open] > ul.dropdown {
-  background: var(--card-bg) !important;
+  background: var(--bg-dropdown) !important;
   backdrop-filter: var(--blur-md);
   -webkit-backdrop-filter: var(--blur-md);
   color: var(--text-main) !important;
@@ -1756,7 +1757,7 @@ select[multiple="multiple"] {
   flex-direction: row;
 }
 .main-left {
-  width: 16rem;
+  width: 13rem;
   height: 100%;
   flex-shrink: 0;
   z-index: 100;
@@ -1770,17 +1771,17 @@ select[multiple="multiple"] {
   transition: all var(--transition-base);
 }
 .main-left .sidenav-header {
-  padding: var(--spacing-8) var(--spacing-3);
-  text-align: center;
+  padding: var(--spacing-6) var(--spacing-3);
+  text-align: left;
 }
 .main-left .sidenav-header .brand {
   display: block;
-  margin: 0 var(--spacing-8);
-  font-size: var(--font-size-3xl);
+  margin: 0 var(--spacing-4);
+  font-size: 1.375rem;
   font-family: "TypoGraphica";
   color: var(--primary);
   text-decoration: none;
-  text-align: center;
+  text-align: left;
   cursor: default;
   font-weight: 700;
 }
@@ -1794,9 +1795,9 @@ select[multiple="multiple"] {
 .main-left .nav > li > a:first-child {
   display: block;
   position: relative;
-  margin: var(--spacing-1) var(--spacing-3);
-  padding: var(--spacing-4) 0 var(--spacing-4) 2.75rem;
-  font-size: var(--font-size-base);
+  margin: 0.25rem 0.75rem;
+  padding: 0.625rem 0 0.625rem 2.5rem;
+  font-size: 0.9375rem;
   font-weight: 500;
   text-decoration: none;
   border-radius: var(--radius-md);
@@ -1884,11 +1885,11 @@ html body .main-left .nav li.slide .slide-menu li {
 }
 html body html body .main-left .nav li.slide .slide-menu li a {
   display: block;
-  padding-left: 3.5rem !important;
-  padding-right: 1rem !important;
-  padding-top: 0.75rem !important;
-  padding-bottom: 0.75rem !important;
-  font-size: 1rem !important;
+  padding-left: 2.75rem !important;
+  padding-right: 0.75rem !important;
+  padding-top: 0.625rem !important;
+  padding-bottom: 0.625rem !important;
+  font-size: 0.8125rem !important;
   color: rgba(203, 213, 225, 0.8) !important;
   text-decoration: none;
   transition: all 200ms ease;
@@ -1901,7 +1902,7 @@ html body html body .main-left .nav li.slide .slide-menu li a:hover {
   background-color: rgba(139, 92, 246, 0.12) !important;
   color: #ffffff !important;
   opacity: 1;
-  padding-left: 3.75rem !important;
+  padding-left: 2.875rem !important;
 }
 html body .main-left .nav li.slide .slide-menu .active {
   background: none;
@@ -1916,9 +1917,9 @@ html body .main-left .nav li.slide .slide-menu .active a {
 .main-left .nav li .menu {
   display: block;
   position: relative;
-  margin: var(--spacing-1) var(--spacing-3);
-  padding: var(--spacing-4) 0 var(--spacing-4) 2.75rem;
-  font-size: var(--font-size-base);
+  margin: 0.25rem 0.75rem;
+  padding: 0.625rem 0 0.625rem 2.5rem;
+  font-size: 0.9375rem;
   font-weight: 500;
   text-decoration: none;
   border-radius: var(--radius-md);
@@ -3322,7 +3323,7 @@ body:not(.Interfaces) .cbi-rowstyle-2:first-child {
   max-width: none;
   max-height: 200px !important;
   border: 0 solid #918e8c;
-  background: var(--card-bg);
+  background: var(--bg-dropdown) !important;
   box-shadow: 0 0 4px #918e8c;
   border-radius: 0.25rem;
   color: var(--main-menu-color);
