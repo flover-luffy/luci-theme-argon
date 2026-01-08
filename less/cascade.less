@@ -139,7 +139,7 @@
   // Font Sizes
   --font-size-xs: 0.75rem;
   --font-size-sm: 0.875rem;
-  --font-size-base: 1rem;
+  --font-size-base: 1.0625rem; // 17px - 增大全局字体
   --font-size-lg: 1.125rem;
   --font-size-xl: 1.25rem;
   --font-size-2xl: 1.5rem;
@@ -404,7 +404,7 @@ a:hover {
   background-color: transparent !important;
   color: rgba(203, 213, 225, 0.9) !important;
   transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1) !important;
-  font-size: 1.1rem !important; // 增加顶级菜单字体大小
+  font-size: 1.25rem !important; // 20px - 增加顶级菜单字体大小
 }
 
 // Parent menu active state (Tier 2)
@@ -430,7 +430,7 @@ a:hover {
 a.food {
   color: rgba(148, 163, 184, 0.9) !important;
   padding-left: 3rem !important;
-  font-size: 1rem !important; // 增加子菜单字体大小
+  font-size: 1.125rem !important; // 18px - 增加子菜单字体大小
   transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
@@ -683,7 +683,7 @@ select[multiple="multiple"] {
   padding: 1rem 1.25rem;
   border: 0;
   border-radius: 0.25rem !important;
-  background-color: #fff;
+  background-color: var(--card-bg);
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .16), 0 0 2px 0 rgba(0, 0, 0, .12);
   text-shadow: none;
 
@@ -1613,13 +1613,13 @@ td>table>tbody>tr>td,
 }
 
 .cbi-rowstyle-2 {
-  background-color: #eee;
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 .cbi-rowstyle-2 .cbi-button-up,
 .cbi-rowstyle-2 .cbi-button-down,
 body:not(.Interfaces) .cbi-rowstyle-2:first-child {
-  background-color: #fff !important;
+  background-color: rgba(255, 255, 255, 0.03) !important;
 }
 
 .cbi-section-table .cbi-section-table-titles .cbi-section-table-cell {
@@ -2057,7 +2057,7 @@ body:not(.Interfaces) .cbi-rowstyle-2:first-child {
   display: flex;
   width: 100%;
   font-size: 0.75rem;
-  background-color: #e9ecef;
+  background-color: rgba(255, 255, 255, 0.05);
   border-radius: 0.5rem;
   height: 1rem;
   overflow: hidden;
@@ -2299,7 +2299,7 @@ body.modal-overlay-active #modal_overlay {
   gap: .2rem;
   padding: .25rem .8rem;
 
-  background: #eee;
+  background: rgba(255, 255, 255, 0.05);
   border-radius: 4px;
 }
 
@@ -2352,7 +2352,7 @@ td>.ifacebadge,
       flex: 1 1 auto;
       min-width: 220px;
       padding: .5em;
-      background-color: #fff;
+      background-color: rgba(255, 255, 255, 0.05);
 
       >span {
         white-space: nowrap;
@@ -2440,7 +2440,7 @@ td>.ifacebadge,
   padding: 2px;
   text-decoration: none;
   border: thin solid #ccc;
-  background-color: #eee;
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 .uci-change-list var ins,
@@ -2568,7 +2568,7 @@ td>.ifacebadge,
 
 .ifacebox-head {
   padding: .25em;
-  background: #eee;
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .ifacebox-head.active {
@@ -2631,7 +2631,7 @@ td>.ifacebadge,
 .cbi-value-field>ul>li .ifacebadge {
   margin-top: -.5rem;
   margin-left: .4rem;
-  background-color: #eee;
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 .cbi-section-table-row>.cbi-value-field .cbi-dropdown {
@@ -2875,7 +2875,7 @@ input[name="nslookup"] {
   gap: 0.5rem;
   border-bottom: thin solid #ccc;
   border-radius: .25rem;
-  background: #eee;
+  background: rgba(255, 255, 255, 0.05);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, .2), 0 1px 2px rgba(0, 0, 0, .05);
 
   h3 {

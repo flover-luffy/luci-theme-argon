@@ -100,7 +100,7 @@
   --font-family-mono: 'SF Mono', 'Consolas', 'Monaco', 'Courier New', monospace;
   --font-size-xs: 0.75rem;
   --font-size-sm: 0.875rem;
-  --font-size-base: 1rem;
+  --font-size-base: 1.0625rem;
   --font-size-lg: 1.125rem;
   --font-size-xl: 1.25rem;
   --font-size-2xl: 1.5rem;
@@ -314,7 +314,7 @@ a:hover {
   background-color: transparent !important;
   color: rgba(203, 213, 225, 0.9) !important;
   transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1) !important;
-  font-size: 1.1rem !important;
+  font-size: 1.25rem !important;
 }
 .menu.active {
   background-color: rgba(139, 92, 246, 0.15) !important;
@@ -333,7 +333,7 @@ a:hover {
 a.food {
   color: rgba(148, 163, 184, 0.9) !important;
   padding-left: 3rem !important;
-  font-size: 1rem !important;
+  font-size: 1.125rem !important;
   transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 .food.active,
@@ -2174,7 +2174,7 @@ footer > a {
   padding: 1rem 1.25rem;
   border: 0;
   border-radius: 0.25rem !important;
-  background-color: #fff;
+  background-color: var(--card-bg);
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 2px 0 rgba(0, 0, 0, 0.12);
   text-shadow: none;
 }
@@ -2961,12 +2961,12 @@ td > table > tbody > tr > td,
   background-color: var(--gray-50);
 }
 .cbi-rowstyle-2 {
-  background-color: #eee;
+  background-color: rgba(255, 255, 255, 0.05);
 }
 .cbi-rowstyle-2 .cbi-button-up,
 .cbi-rowstyle-2 .cbi-button-down,
 body:not(.Interfaces) .cbi-rowstyle-2:first-child {
-  background-color: #fff !important;
+  background-color: rgba(255, 255, 255, 0.03) !important;
 }
 .cbi-section-table .cbi-section-table-titles .cbi-section-table-cell {
   width: auto !important;
@@ -3319,7 +3319,7 @@ body:not(.Interfaces) .cbi-rowstyle-2:first-child {
   display: flex;
   width: 100%;
   font-size: 0.75rem;
-  background-color: #e9ecef;
+  background-color: rgba(255, 255, 255, 0.05);
   border-radius: 0.5rem;
   height: 1rem;
   overflow: hidden;
@@ -3520,7 +3520,7 @@ body.modal-overlay-active #modal_overlay {
   align-items: center;
   gap: 0.2rem;
   padding: 0.25rem 0.8rem;
-  background: #eee;
+  background: rgba(255, 255, 255, 0.05);
   border-radius: 4px;
 }
 td > .ifacebadge,
@@ -3566,7 +3566,7 @@ td > .ifacebadge,
   flex: 1 1 auto;
   min-width: 220px;
   padding: 0.5em;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.05);
 }
 .network-status-table .ifacebox-body .ifacebadge > span {
   white-space: nowrap;
@@ -3641,7 +3641,7 @@ td > .ifacebadge,
   padding: 2px;
   text-decoration: none;
   border: thin solid #ccc;
-  background-color: #eee;
+  background-color: rgba(255, 255, 255, 0.05);
 }
 .uci-change-list var ins,
 .uci-change-list var del {
@@ -3741,7 +3741,7 @@ td > .ifacebadge,
 }
 .ifacebox-head {
   padding: 0.25em;
-  background: #eee;
+  background: rgba(255, 255, 255, 0.08);
 }
 .ifacebox-head.active {
   background: var(--primary);
@@ -3790,7 +3790,7 @@ td > .ifacebadge,
 .cbi-value-field > ul > li .ifacebadge {
   margin-top: -0.5rem;
   margin-left: 0.4rem;
-  background-color: #eee;
+  background-color: rgba(255, 255, 255, 0.05);
 }
 .cbi-section-table-row > .cbi-value-field .cbi-dropdown {
   min-width: 3rem;
@@ -3989,7 +3989,7 @@ input[name="nslookup"] {
   gap: 0.5rem;
   border-bottom: thin solid #ccc;
   border-radius: 0.25rem;
-  background: #eee;
+  background: rgba(255, 255, 255, 0.05);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 .commandbox h3 {
@@ -4090,9 +4090,9 @@ pre.command-output {
   margin: 0 1rem;
   padding: 1rem;
   resize: none;
-  color: #8898aa;
+  color: var(--text-secondary);
   border-radius: 0.25rem;
-  border: 1px solid #dee2e6;
+  border: 1px solid var(--border-default);
 }
 [data-page="admin-system-startup"] textarea:focus-visible {
   outline: none;
@@ -4109,9 +4109,9 @@ pre.command-output {
   background-color: transparent;
   background: var(--white);
   outline: none;
-  color: #8898aa;
+  color: var(--text-secondary);
   border-radius: 0.25rem;
-  border: 1px solid #dee2e6;
+  border: 1px solid var(--border-default);
   transition: all 0.2s ease;
 }
 [data-page="admin-system-crontab"] #view p textarea:focus-visible {
@@ -4223,7 +4223,7 @@ pre.command-output {
   margin-left: 5px;
 }
 [data-page="admin-system-fileassistant"] .fb-container .panel-container {
-  border-bottom-color: #dee2e6;
+  border-bottom-color: var(--border-default);
   display: flex;
 }
 [data-page="admin-system-fileassistant"] .fb-container .panel-container .panel-title {
@@ -4321,7 +4321,7 @@ pre.command-output {
 }
 [data-page="admin-network-network"] #modal_overlay > .modal.cbi-modal > div > p > textarea {
   height: 20em !important;
-  border: 1px solid #dee2e6 !important;
+  border: 1px solid var(--border-default) !important;
   border-radius: 4px;
 }
 [data-page="admin-network-dhcp"] .cbi-value {
@@ -4341,8 +4341,8 @@ pre.command-output {
 [data-page="admin-network-diagnostics"] textarea {
   background: transparent;
   border-radius: 0.25rem;
-  color: #8898aa;
-  border: 1px solid #dee2e6;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-default);
   padding: 0.5rem;
 }
 [data-page="admin-network-diagnostics"] .tr {
@@ -4351,7 +4351,7 @@ pre.command-output {
 }
 [data-page="admin-network-diagnostics"] .tr .td {
   background-color: var(--bg-surface) !important;
-  border-bottom: 1px solid #dee2e6 !important;
+  border-bottom: 1px solid var(--border-default) !important;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -4486,8 +4486,8 @@ pre.command-output {
   white-space: normal;
 }
 [data-page^="admin-services-openclash"] .oc {
-  --bg-light: #fff;
-  --bg-gray: #fff;
+  --bg-light: rgba(255, 255, 255, 0.05);
+  --bg-gray: rgba(255, 255, 255, 0.05);
   border-radius: 8px;
 }
 [data-page^="admin-services-openclash"] .oc .developer-container {
@@ -4578,8 +4578,8 @@ pre.command-output {
 [data-page^="admin-services-openclash"] #diag-rc-output > pre,
 [data-page^="admin-services-openclash"] #dns-rc-output > pre {
   font-size: 0.875rem;
-  color: #8898aa;
-  border: 1px solid #dee2e6;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-default);
   background-color: transparent;
   border-radius: 0.25rem;
   font-family: var(--font-family-heading) !important;
@@ -4611,20 +4611,20 @@ pre.command-output {
 }
 /* wireless overview */
 #cbi-wireless > #wifi_assoclist_table > .tr {
-  box-shadow: inset 1px -1px 0 #ddd, inset -1px -1px 0 #ddd;
+  box-shadow: inset 1px -1px 0 var(--border-default), inset -1px -1px 0 var(--border-default);
 }
 #cbi-wireless > #wifi_assoclist_table > .tr.placeholder > .td {
   right: 2rem;
   bottom: 2rem;
   left: 2rem;
-  border-top: thin solid #ddd !important;
+  border-top: thin solid var(--border-default) !important;
 }
 #cbi-wireless > #wifi_assoclist_table > .tr.table-titles {
-  box-shadow: inset 1px 0 0 #ddd, inset -1px 0 0 #ddd;
+  box-shadow: inset 1px 0 0 var(--border-default), inset -1px 0 0 var(--border-default);
 }
 #cbi-wireless > #wifi_assoclist_table > .tr.table-titles > .th {
-  border-bottom: thin solid #ddd;
-  box-shadow: 0 -1px 0 0 #ddd;
+  border-bottom: thin solid var(--border-default);
+  box-shadow: 0 -1px 0 0 var(--border-default);
 }
 #wifi_assoclist_table > .tr > .td[data-title="RX Rate / TX Rate"] {
   width: 23rem;
@@ -4940,7 +4940,7 @@ div[style*="display:grid;grid-template-columns:repeat"] .ifacebox .ifacebox-body
     display: block;
     flex: 1 1 100%;
     border-bottom: thin solid rgba(0, 0, 0, 0.26);
-    background: #e9ecef;
+    background: rgba(255, 255, 255, 0.05);
   }
   .td[data-title],
   [data-page^="admin-status-realtime"] .td[id] {
@@ -5076,7 +5076,7 @@ div[style*="display:grid;grid-template-columns:repeat"] .ifacebox .ifacebox-body
     margin: 5em auto;
     padding: 1em;
     border-radius: 3px !important;
-    background: #fff;
+    background: var(--card-bg);
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 2px 0 rgba(0, 0, 0, 0.12);
   }
   .cbi-dropdown[open] > ul.dropdown {

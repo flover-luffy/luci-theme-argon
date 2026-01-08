@@ -74,9 +74,9 @@
         margin: 0 1rem;
         padding: 1rem;
         resize: none;
-        color: #8898aa;
+        color: var(--text-secondary);
         border-radius: 0.25rem;
-        border: 1px solid #dee2e6;
+        border: 1px solid var(--border-default);
 
         &:focus-visible {
             outline: none;
@@ -99,9 +99,9 @@
             background-color: transparent;
             background: var(--white);
             outline: none;
-            color: #8898aa;
+            color: var(--text-secondary);
             border-radius: 0.25rem;
-            border: 1px solid #dee2e6;
+            border: 1px solid var(--border-default);
             transition: all 0.2s ease;
 
             &:focus-visible {
@@ -282,7 +282,7 @@
     }
 
     .fb-container .panel-container {
-        border-bottom-color: #dee2e6;
+        border-bottom-color: var(--border-default);
         display: flex;
 
         .panel-title {
@@ -439,7 +439,7 @@
 
     #modal_overlay>.modal.cbi-modal>div>p>textarea {
         height: 20em !important;
-        border: 1px solid #dee2e6 !important;
+        border: 1px solid var(--border-default) !important;
         border-radius: 4px;
     }
 }
@@ -470,8 +470,8 @@
     textarea {
         background: transparent;
         border-radius: 0.25rem;
-        color: #8898aa;
-        border: 1px solid #dee2e6;
+        color: var(--text-secondary);
+        border: 1px solid var(--border-default);
         padding: 0.5rem;
     }
 
@@ -481,7 +481,7 @@
 
         .td {
             background-color: var(--bg-surface) !important;
-            border-bottom: 1px solid #dee2e6 !important;
+            border-bottom: 1px solid var(--border-default) !important;
             display: flex;
             flex-direction: row;
             align-items: center;
@@ -697,8 +697,8 @@
 // Services - OpenClash
 [data-page^="admin-services-openclash"] {
     .oc {
-        --bg-light: #fff;
-        --bg-gray: #fff;
+        --bg-light: rgba(255, 255, 255, 0.05);
+        --bg-gray: rgba(255, 255, 255, 0.05);
         border-radius: 8px;
 
         .developer-container {
@@ -813,8 +813,8 @@
     #diag-rc-output>pre,
     #dns-rc-output>pre {
         font-size: 0.875rem;
-        color: #8898aa;
-        border: 1px solid #dee2e6;
+        color: var(--text-secondary);
+        border: 1px solid var(--border-default);
         background-color: transparent;
         border-radius: 0.25rem;
         font-family: var(--font-family-heading) !important;
@@ -865,23 +865,23 @@
 #cbi-wireless {
     >#wifi_assoclist_table {
         >.tr {
-            box-shadow: inset 1px -1px 0 #ddd, inset -1px -1px 0 #ddd;
+            box-shadow: inset 1px -1px 0 var(--border-default), inset -1px -1px 0 var(--border-default);
 
             &.placeholder {
                 >.td {
                     right: 2rem;
                     bottom: 2rem;
                     left: 2rem;
-                    border-top: thin solid #ddd !important;
+                    border-top: thin solid var(--border-default) !important;
                 }
             }
 
             &.table-titles {
-                box-shadow: inset 1px 0 0 #ddd, inset -1px 0 0 #ddd;
+                box-shadow: inset 1px 0 0 var(--border-default), inset -1px 0 0 var(--border-default);
 
                 >.th {
-                    border-bottom: thin solid #ddd;
-                    box-shadow: 0 -1px 0 0 #ddd;
+                    border-bottom: thin solid var(--border-default);
+                    box-shadow: 0 -1px 0 0 var(--border-default);
                 }
             }
         }
