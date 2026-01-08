@@ -2131,8 +2131,8 @@ footer > a {
   transform: translateX(-50%) translateY(-50%);
   padding: 1rem;
   border-radius: 0.5rem;
-  background: #ffffff;
-  box-shadow: 0 0 1rem 0 rgba(136, 152, 170, 0.15);
+  background: rgba(30, 30, 30, 0.95);
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.5);
 }
 #view > div:first-child {
   display: flex;
@@ -3245,7 +3245,7 @@ body:not(.Interfaces) .cbi-rowstyle-2:first-child {
   max-width: none;
   max-height: 200px !important;
   border: 0 solid #918e8c;
-  background: #ffffff;
+  background: var(--card-bg);
   box-shadow: 0 0 4px #918e8c;
   border-radius: 0.25rem;
   color: var(--main-menu-color);
@@ -3367,7 +3367,7 @@ body:not(.Interfaces) .cbi-rowstyle-2:first-child {
   margin: 5em auto;
   padding: 1rem;
   border-radius: 0.25rem !important;
-  background: #fff;
+  background: var(--card-bg);
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 2px 0 rgba(0, 0, 0, 0.12);
 }
 .modal > * {
@@ -3597,10 +3597,10 @@ td > .ifacebadge,
   min-height: 15rem;
   padding: 1rem;
   resize: none;
-  color: #242424;
+  color: var(--text-primary);
   border: 0;
   border-radius: 0.25rem;
-  background-color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 #syslog:focus {
   outline: 0;
@@ -3837,7 +3837,7 @@ span[data-tooltip] .label {
   left: -10000px;
   box-shadow: 0 3px 9px rgba(50, 50, 9, 0), 3px 4px 8px rgba(94, 114, 228, 0.1);
   border-radius: 0.25rem;
-  background: #fff;
+  background: rgba(30, 30, 30, 0.95);
   white-space: pre;
   padding: 0.5rem;
   opacity: 0;
@@ -4336,7 +4336,7 @@ pre.command-output {
 [data-page="admin-network-diagnostics"] .cbi-section {
   padding: 1rem;
   font-family: monospace;
-  background: #fff !important;
+  background: var(--card-bg) !important;
 }
 [data-page="admin-network-diagnostics"] textarea {
   background: transparent;
@@ -4552,7 +4552,7 @@ pre.command-output {
   min-width: auto !important;
 }
 [data-page^="admin-services-openclash"] .oc .config-upload-content {
-  background: #fff !important;
+  background: rgba(255, 255, 255, 0.05) !important;
 }
 [data-page^="admin-services-openclash"] .oc .subscription-info-container {
   background: transparent !important;
