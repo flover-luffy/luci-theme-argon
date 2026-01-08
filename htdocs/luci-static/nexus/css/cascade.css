@@ -21,11 +21,11 @@
  *  Licensed to the public under the Apache License 2.0
  */
 :root {
-  --primary: #3B82F6;
-  --primary-hover: #2563EB;
-  --primary-active: #1D4ED8;
-  --primary-light: #60A5FA;
-  --primary-lighter: #93C5FD;
+  --primary: #8B5CF6;
+  --primary-hover: #7C3AED;
+  --primary-active: #6D28D9;
+  --primary-light: #A78BFA;
+  --primary-lighter: #C4B5FD;
   --success: #10B981;
   --success-light: #34D399;
   --warning: #F59E0B;
@@ -61,7 +61,7 @@
   --input-placeholder: var(--text-tertiary);
   --hover-overlay: rgba(255, 255, 255, 0.05);
   --active-overlay: rgba(255, 255, 255, 0.1);
-  --focus-ring: 0 0 0 3px rgba(59, 130, 246, 0.3);
+  --focus-ring: 0 0 0 3px rgba(139, 92, 246, 0.3);
   --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
   --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.4), 0 1px 2px -1px rgba(0, 0, 0, 0.4);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -2px rgba(0, 0, 0, 0.4);
@@ -69,7 +69,7 @@
   --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.7), 0 8px 10px -6px rgba(0, 0, 0, 0.6);
   --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
   --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.3);
-  --shadow-glow: 0 0 20px rgba(59, 130, 246, 0.3);
+  --shadow-glow: 0 0 20px rgba(139, 92, 246, 0.3);
   --blur-sm: blur(10px);
   --blur-md: blur(16px);
   --blur-lg: blur(20px);
@@ -317,16 +317,16 @@ a:hover {
   font-size: 1.1rem !important;
 }
 .menu.active {
-  background-color: rgba(59, 130, 246, 0.15) !important;
+  background-color: rgba(139, 92, 246, 0.15) !important;
   color: #ffffff !important;
-  border-left: 3px solid #3B82F6 !important;
+  border-left: 3px solid var(--primary) !important;
 }
 .nav li.active {
   background-color: var(--primary) !important;
   color: #ffffff !important;
 }
 .menu:hover {
-  background-color: rgba(59, 130, 246, 0.08) !important;
+  background-color: rgba(139, 92, 246, 0.08) !important;
   color: #ffffff !important;
 }
 .food,
@@ -338,19 +338,19 @@ a.food {
 }
 .food.active,
 a.food.active {
-  background: linear-gradient(90deg, rgba(59, 130, 246, 0.3) 0%, rgba(59, 130, 246, 0.2) 100%) !important;
+  background: linear-gradient(90deg, rgba(139, 92, 246, 0.3) 0%, rgba(139, 92, 246, 0.2) 100%) !important;
   color: #ffffff !important;
-  border-left: 3px solid #60A5FA !important;
+  border-left: 3px solid var(--primary-light) !important;
   font-weight: 600 !important;
 }
 .food:hover,
 a.food:hover {
-  background-color: rgba(59, 130, 246, 0.12) !important;
+  background-color: rgba(139, 92, 246, 0.12) !important;
   color: rgba(255, 255, 255, 0.9) !important;
 }
 .menu:focus-visible,
 .food:focus-visible {
-  outline: 2px solid #3B82F6 !important;
+  outline: 2px solid var(--primary) !important;
   outline-offset: -2px !important;
 }
 .cbi-value-title,
@@ -456,7 +456,7 @@ input:-webkit-autofill:active {
 .cbi-button-action:hover,
 .cbi-button-reload:hover {
   background: linear-gradient(135deg, var(--primary-hover) 0%, var(--primary-active) 100%) !important;
-  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4) !important;
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.4) !important;
   transform: translateY(-1px);
 }
 .node-services-vssr .block {
@@ -516,7 +516,7 @@ input:-webkit-autofill:active {
 }
 .nav > li > a.active,
 .nav > .slide > .menu.active {
-  background: linear-gradient(90deg, rgba(59, 130, 246, 0.2) 0%, rgba(59, 130, 246, 0.1) 100%) !important;
+  background: linear-gradient(90deg, rgba(139, 92, 246, 0.2) 0%, rgba(139, 92, 246, 0.1) 100%) !important;
   border-left: 3px solid var(--primary);
   color: #fff !important;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -575,7 +575,7 @@ svg,
   box-shadow: var(--shadow-sm);
 }
 .cbi-button-neutral {
-  background-color: rgba(255, 255, 255, 0.08) !important;
+  background-color: rgba(139, 92, 246, 0.08) !important;
   color: var(--text-primary) !important;
   border: 1px solid var(--border-default) !important;
 }

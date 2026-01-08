@@ -28,12 +28,12 @@
   // Based on UI/UX Pro Max Best Practices
   // ========================================================================
 
-  // Primary Colors (Trust Blue - Dashboard Standard)
-  --primary: #3B82F6; // Blue-500 - Main actions
-  --primary-hover: #2563EB; // Blue-600 - Hover state
-  --primary-active: #1D4ED8; // Blue-700 - Active state
-  --primary-light: #60A5FA; // Blue-400 - Highlights
-  --primary-lighter: #93C5FD; // Blue-300 - Subtle accents
+  // Primary Colors (Royal Violet - Pro Max)
+  --primary: #8B5CF6; // Violet-500 - Main actions
+  --primary-hover: #7C3AED; // Violet-600 - Hover state
+  --primary-active: #6D28D9; // Violet-700 - Active state
+  --primary-light: #A78BFA; // Violet-400 - Highlights
+  --primary-lighter: #C4B5FD; // Violet-300 - Subtle accents
 
   // Semantic Colors
   --success: #10B981; // Emerald-500
@@ -86,7 +86,7 @@
   // Interactive States
   --hover-overlay: rgba(255, 255, 255, 0.05);
   --active-overlay: rgba(255, 255, 255, 0.1);
-  --focus-ring: 0 0 0 3px rgba(59, 130, 246, 0.3);
+  --focus-ring: 0 0 0 3px rgba(139, 92, 246, 0.3);
 
   // Shadows (Optimized for dark mode)
   --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
@@ -96,7 +96,7 @@
   --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.7), 0 8px 10px -6px rgba(0, 0, 0, 0.6);
   --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.8);
   --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.3);
-  --shadow-glow: 0 0 20px rgba(59, 130, 246, 0.3);
+  --shadow-glow: 0 0 20px rgba(139, 92, 246, 0.3);
 
   // Glassmorphism Effects (10-20px blur)
   --blur-sm: blur(10px);
@@ -410,9 +410,9 @@ a:hover {
 
 // Parent menu active state (Tier 2)
 .menu.active {
-  background-color: rgba(59, 130, 246, 0.15) !important;
+  background-color: rgba(139, 92, 246, 0.15) !important;
   color: #ffffff !important;
-  border-left: 3px solid #3B82F6 !important;
+  border-left: 3px solid var(--primary) !important;
 }
 
 .nav li.active {
@@ -422,7 +422,7 @@ a:hover {
 
 // Parent menu hover
 .menu:hover {
-  background-color: rgba(59, 130, 246, 0.08) !important;
+  background-color: rgba(139, 92, 246, 0.08) !important;
   color: #ffffff !important;
 }
 
@@ -438,23 +438,23 @@ a.food {
 // Active submenu (Tier 3) - darker blue to differentiate from parent
 .food.active,
 a.food.active {
-  background: linear-gradient(90deg, rgba(59, 130, 246, 0.3) 0%, rgba(59, 130, 246, 0.2) 100%) !important;
+  background: linear-gradient(90deg, rgba(139, 92, 246, 0.3) 0%, rgba(139, 92, 246, 0.2) 100%) !important;
   color: #ffffff !important;
-  border-left: 3px solid #60A5FA !important;
+  border-left: 3px solid var(--primary-light) !important;
   font-weight: 600 !important;
 }
 
 // Submenu hover
 .food:hover,
 a.food:hover {
-  background-color: rgba(59, 130, 246, 0.12) !important;
+  background-color: rgba(139, 92, 246, 0.12) !important;
   color: rgba(255, 255, 255, 0.9) !important;
 }
 
 // Focus states for accessibility
 .menu:focus-visible,
 .food:focus-visible {
-  outline: 2px solid #3B82F6 !important;
+  outline: 2px solid var(--primary) !important;
   outline-offset: -2px !important;
 }
 
