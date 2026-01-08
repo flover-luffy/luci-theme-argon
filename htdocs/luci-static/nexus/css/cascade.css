@@ -514,34 +514,6 @@ input:-webkit-autofill:active {
   color: #fff !important;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
-.slide-menu {
-  background: rgba(0, 0, 0, 0.3) !important;
-  border-radius: var(--radius-md);
-  margin: var(--spacing-2) var(--spacing-3) !important;
-  padding: var(--spacing-2) 0 !important;
-  border-left: 2px solid rgba(59, 130, 246, 0.3) !important;
-}
-.slide-menu li a {
-  padding-left: 3.5rem !important;
-  color: rgba(203, 213, 225, 0.8) !important;
-  opacity: 0.8;
-  transition: all 200ms ease;
-}
-.slide-menu li a:hover {
-  color: #fff !important;
-  opacity: 1;
-  background: rgba(59, 130, 246, 0.12) !important;
-  transform: translateX(5px);
-  padding-left: 3.75rem !important;
-}
-.slide-menu .active a {
-  color: var(--primary-light) !important;
-  font-weight: 600;
-}
-.slide-menu .active::after {
-  background: linear-gradient(90deg, var(--primary) 0%, transparent 100%) !important;
-  opacity: 0.5;
-}
 .showSide {
   color: #fff !important;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
@@ -1601,8 +1573,12 @@ select[multiple="multiple"] {
   background: none;
 }
 .main-left .nav li.slide .slide-menu {
-  margin: 0 var(--spacing-3) 0 2.75rem;
-  padding: 0 var(--spacing-3);
+  background: rgba(0, 0, 0, 0.3) !important;
+  margin: 0.5rem 1rem 0.5rem 1.5rem !important;
+  padding: 0.5rem 0 !important;
+  border-radius: var(--radius-md);
+  border-left: 2px solid rgba(59, 130, 246, 0.3) !important;
+  overflow: hidden;
 }
 .main-left .nav li.slide .slide-menu.active {
   display: block;
@@ -1610,61 +1586,37 @@ select[multiple="multiple"] {
 .main-left .nav li.slide .slide-menu li {
   position: relative;
   margin: 0;
-  border-radius: var(--radius-sm);
-  background: none;
   list-style: none;
 }
 .main-left .nav li.slide .slide-menu li a {
-  padding: var(--spacing-3) 0;
+  display: block;
+  padding: 0.5rem 1rem 0.5rem 2rem !important;
+  font-size: 0.875rem;
+  color: rgba(203, 213, 225, 0.8) !important;
   text-decoration: none;
+  transition: all 200ms ease;
+  opacity: 0.8;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  transition: all var(--transition-base);
-}
-.main-left .nav li.slide .slide-menu li::after {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 2px;
-  content: "";
-  background: linear-gradient(90deg, var(--primary) 0%, var(--primary-dark) 100%);
-  transition: all var(--transition-base);
-}
-.main-left .nav li.slide .slide-menu li:hover {
   background: none;
 }
-.main-left .nav li.slide .slide-menu li:hover a {
+.main-left .nav li.slide .slide-menu li a a {
   color: var(--primary);
   transform: translateX(4px);
 }
-.main-left .nav li.slide .slide-menu li:hover::after {
+.main-left .nav li.slide .slide-menu li a::after {
   width: 100%;
 }
 .main-left .nav li.slide .slide-menu .active {
   background: none;
-  color: var(--menu-color);
 }
 .main-left .nav li.slide .slide-menu .active a {
-  color: var(--primary);
+  background: linear-gradient(90deg, rgba(59, 130, 246, 0.3) 0%, rgba(59, 130, 246, 0.2) 100%) !important;
+  color: #ffffff !important;
+  border-left: 3px solid #60A5FA !important;
   font-weight: 600;
-}
-.main-left .nav li.slide .slide-menu .active::after {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 2px;
-  content: "";
-  background: linear-gradient(90deg, var(--primary) 0%, var(--primary-dark) 100%);
-  transition: all var(--transition-base);
-}
-.main-left .nav li.slide .slide-menu .active:hover {
-  background: none;
-}
-.main-left .nav li.slide .slide-menu .active:hover::after {
-  width: 100%;
+  opacity: 1;
 }
 .main-left .nav li .menu {
   display: block;

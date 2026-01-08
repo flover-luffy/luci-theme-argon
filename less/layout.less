@@ -155,10 +155,14 @@
                     background: none;
                 }
 
-                // Submenu container
+                // Submenu container - Refactored for clear hierarchy
                 .slide-menu {
-                    margin: 0 var(--spacing-3) 0 2.75rem;
-                    padding: 0 var(--spacing-3);
+                    background: rgba(0, 0, 0, 0.3) !important; // 深色背景
+                    margin: 0.5rem 1rem 0.5rem 1.5rem !important; // 调整间距
+                    padding: 0.5rem 0 !important;
+                    border-radius: var(--radius-md);
+                    border-left: 2px solid rgba(59, 130, 246, 0.3) !important; // 蓝色左边框
+                    overflow: hidden;
 
                     &.active {
                         display: block;
@@ -167,32 +171,19 @@
                     li {
                         position: relative;
                         margin: 0;
-                        border-radius: var(--radius-sm);
-                        background: none;
                         list-style: none;
 
                         a {
-                            padding: var(--spacing-3) 0;
+                            display: block;
+                            padding: 0.5rem 1rem 0.5rem 2rem !important; // 增加内部缩进
+                            font-size: 0.875rem;
+                            color: rgba(203, 213, 225, 0.8) !important; // 默认灰色
                             text-decoration: none;
+                            transition: all 200ms ease;
+                            opacity: 0.8;
                             white-space: nowrap;
                             overflow: hidden;
                             text-overflow: ellipsis;
-                            transition: all var(--transition-base);
-                        }
-
-                        // Hover indicator line
-                        &::after {
-                            position: absolute;
-                            left: 0;
-                            bottom: 0;
-                            width: 0;
-                            height: 2px;
-                            content: "";
-                            background: linear-gradient(90deg, var(--primary) 0%, var(--primary-dark) 100%);
-                            transition: all var(--transition-base);
-                        }
-
-                        &:hover {
                             background: none;
 
                             a {
@@ -206,33 +197,17 @@
                         }
                     }
 
+
                     // Active submenu item
                     .active {
                         background: none;
-                        color: var(--menu-color);
 
                         a {
-                            color: var(--primary);
+                            background: linear-gradient(90deg, rgba(59, 130, 246, 0.3) 0%, rgba(59, 130, 246, 0.2) 100%) !important;
+                            color: #ffffff !important;
+                            border-left: 3px solid #60A5FA !important;
                             font-weight: 600;
-                        }
-
-                        &::after {
-                            position: absolute;
-                            left: 0;
-                            bottom: 0;
-                            width: 100%;
-                            height: 2px;
-                            content: "";
-                            background: linear-gradient(90deg, var(--primary) 0%, var(--primary-dark) 100%);
-                            transition: all var(--transition-base);
-                        }
-
-                        &:hover {
-                            background: none;
-
-                            &::after {
-                                width: 100%;
-                            }
+                            opacity: 1;
                         }
                     }
                 }

@@ -8,7 +8,7 @@ include $(TOPDIR)/rules.mk
 
 LUCI_TITLE:=Nexus Theme
 LUCI_DEPENDS:=+wget +jsonfilter
-PKG_VERSION:=3.4.20
+PKG_VERSION:=3.4.30
 PKG_RELEASE:=20260108
 
 
