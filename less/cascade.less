@@ -74,7 +74,7 @@
   --border-strong: rgba(255, 255, 255, 0.18);
 
   // Form Elements
-  --input-bg: rgba(255, 255, 255, 0.08);
+  --input-bg: rgba(255, 255, 255, 0.04);
   --input-bg-hover: rgba(255, 255, 255, 0.12);
   --input-bg-focus: rgba(255, 255, 255, 0.15);
   --input-border: var(--border-default);
@@ -322,13 +322,12 @@ small {
   color: var(--text-secondary) !important; // #CBD5E1 - 7.5:1 contrast
 }
 
-// Form elements
 input,
 select,
 textarea,
 button {
   color: var(--text-main) !important;
-  background-color: rgba(255, 255, 255, 0.05) !important;
+  background-color: var(--input-bg) !important;
   border-color: var(--border-color) !important;
 }
 
@@ -379,7 +378,7 @@ button {
 .label,
 .badge,
 .ifacebadge {
-  background-color: rgba(59, 130, 246, 0.3) !important;
+  background-color: rgba(139, 92, 246, 0.3) !important;
   color: #ffffff !important;
 }
 
@@ -431,7 +430,7 @@ a:hover {
 a.food {
   color: rgba(148, 163, 184, 0.9) !important;
   padding-left: 3rem !important;
-  font-size: 0.875rem !important;
+  font-size: 1rem !important; // 增加子菜单字体大小
   transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
@@ -1286,7 +1285,7 @@ td>table>tbody>tr>td,
 
 .tabs {
   padding: 0 1rem;
-  background-color: #FFFFFF;
+  background-color: transparent;
   border-radius: 0.25rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, .03);
   white-space: nowrap;
@@ -1298,26 +1297,23 @@ td>table>tbody>tr>td,
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: #f6f9fc
+    background-color: rgba(255, 255, 255, 0.1);
   }
 
   &::-webkit-scrollbar-track {
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.02);
   }
 
   li[class~="active"],
   li:hover {
     cursor: pointer;
-    border-bottom: 0.18751rem solid #5e72e4;
     border-bottom: 0.18751rem solid var(--primary);
-    color: #5e72e4;
     color: var(--primary);
-    background-color: #e4e9ee;
+    background-color: rgba(255, 255, 255, 0.12);
     margin-bottom: 0;
     border-radius: 0;
 
     a {
-      color: #5e72e4;
       color: var(--primary);
     }
   }
@@ -1332,12 +1328,11 @@ td>table>tbody>tr>td,
 
     a {
       text-decoration: none;
-      color: #404040;
+      color: var(--text-secondary);
       padding: 0.5rem 0.8rem;
     }
 
     &:hover {
-      border-bottom: 0.18751rem solid #5e72e4;
       border-bottom: 0.18751rem solid var(--primary);
     }
   }
@@ -1356,15 +1351,15 @@ td>table>tbody>tr>td,
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: #f6f9fc
+    background-color: rgba(255, 255, 255, 0.1);
   }
 
   &::-webkit-scrollbar-track {
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.02);
   }
 
   li {
-    background: #dce3e9;
+    background: rgba(255, 255, 255, 0.08);
     display: inline-block;
     font-size: 0.875rem;
     border-top-left-radius: 0.25rem;
@@ -1376,35 +1371,30 @@ td>table>tbody>tr>td,
 
     a {
       text-decoration: none;
-      color: #404040;
+      color: var(--text-secondary);
       padding: 0.5rem 0.8rem;
     }
 
     &:hover {
       cursor: pointer;
-      border-bottom: 0.18751rem solid #5e72e4;
       border-bottom: 0.18751rem solid var(--primary);
-      color: #5e72e4;
       color: var(--primary);
-      background-color: #e4e9ee;
+      background-color: rgba(255, 255, 255, 0.12);
       margin-bottom: 0;
 
       a {
-        color: #525f7f;
+        color: var(--text-primary);
       }
     }
   }
 
   li[class~="cbi-tab"] {
-    border-bottom: 0.18751rem solid #5e72e4;
     border-bottom: 0.18751rem solid var(--primary);
-    color: #5e72e4;
     color: var(--primary);
-    background-color: #e4e9ee;
+    background-color: rgba(255, 255, 255, 0.15);
     margin-bottom: 0;
 
     a {
-      color: #5e72e4;
       color: var(--primary);
     }
   }
@@ -2027,11 +2017,11 @@ body:not(.Interfaces) .cbi-rowstyle-2:first-child {
 }
 
 .cbi-dropdown[open]>ul.dropdown>li[selected] {
-  background: #e4e9ee;
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .cbi-dropdown[open]>ul.dropdown>li.focus {
-  background: #e4e9ee;
+  background: rgba(255, 255, 255, 0.1);
   outline: none;
 }
 
@@ -2582,7 +2572,7 @@ td>.ifacebadge,
 }
 
 .ifacebox-head.active {
-  background: #5e72e4;
+  background: var(--primary);
   background: var(--primary);
 
   * {
